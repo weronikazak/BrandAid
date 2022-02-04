@@ -1,7 +1,7 @@
 {
-	"extends": "next",
-	"root": true,
-	"rules": {
-		"@next/next/no-img-element": "off"
-	}
+  "extends": "next",
+  "root": true,
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }

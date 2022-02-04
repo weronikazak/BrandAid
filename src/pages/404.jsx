@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function Custom404() {
-	const router = useRouter();
+  const router = useRouter();
 
-	useEffect(() => {
-		router.replace("/quickstart");
-	});
+  useEffect(() => {
+    router.replace("/quickstart");
+  });
 
-	return null;
+  return null;
 }

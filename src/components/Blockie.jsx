@@ -14,7 +14,11 @@ function Blockie(props) {
 
   return (
     <Blockies
-      seed={props.currentWallet ? account.toLowerCase() : props.address.toLowerCase()}
+      seed={
+        props.currentWallet
+          ? account.toLowerCase()
+          : props.address.toLowerCase()
+      }
       className="identicon"
       {...props}
     />

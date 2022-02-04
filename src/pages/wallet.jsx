@@ -1,8 +1,8 @@
-import Wallet from 'components/Wallet/Wallet';
-import React from 'react'
+import Wallet from "components/Wallet/Wallet";
+import React from "react";
 
 function wallet() {
-    return <Wallet/>
+  return <Wallet />;
 }
 
-export default wallet
+export default wallet;
