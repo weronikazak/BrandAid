@@ -9,6 +9,8 @@ import Image from 'next/image'
 import chart from '../../../public/chart_placeholder.PNG';
 import { Pie } from 'react-chartjs-2'
 import {Chart, ArcElement} from 'chart.js';
+import Link from "next/link";
+
 
 Chart.register(ArcElement);
 

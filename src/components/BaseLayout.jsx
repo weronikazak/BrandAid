@@ -62,6 +62,7 @@ function BaseLayout({ children }) {
       </Header>
       <div style={styles.content}>{children}</div>
       
+      {/* // FOOTER CHANGE */}
       <Footer style={{ textAlign: "left", background: "#F2F2F2", width: "100vw", display: "flex",
                       justifyContent: "space-between", position:"absolute", "bottom":0,}}>
         <Text style={{ display: "inline-block", fontSize: 16, fontWeight: "bold" }}>
