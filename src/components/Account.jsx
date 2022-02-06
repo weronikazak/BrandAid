@@ -9,20 +9,6 @@ import Text from "antd/lib/typography/Text";
 import Link from "next/link";
 
 const styles = {
-  account: {
-    height: "42px",
-    padding: "0 15px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "fit-content",
-    borderRadius: "12px",
-    backgroundColor: "rgb(244, 244, 244)",
-    cursor: "pointer",
-  },
-  text: {
-    color: "#21BF96",
-  },
   signup: {
     height: "48px",
     padding: "0 12px",
@@ -34,12 +20,14 @@ const styles = {
     borderRadius: "12px",
     backgroundColor: "#7A09D2",
     marginLeft: "10px",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontWeight: 800
   },
   login: {
     height: "48px",
     padding: "0 12px",
     color: "white",
+    fontWeight: 800,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -69,7 +57,7 @@ function Account() {
           Login
         </Button>
         </Link>
-      <Link href="/signup">
+      <Link href="/signUp">
         <Button
           style={styles.signup}
           // onClick={() => authenticate({ signingMessage: "Hello World!" })}

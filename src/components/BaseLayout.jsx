@@ -49,7 +49,7 @@ const styles = {
 
 function BaseLayout({ children }) {
   return (
-    <Layout style={{ display:"absolute", "bottom":0, height: "100vh", overflow: "auto", background: "#DBDBDB" }}>
+    <Layout style={{  height: "100vh", overflow: "auto", background: "#DBDBDB" }}>
       <Header style={styles.header}>
         <Logo />
         <MenuItems />
@@ -63,7 +63,7 @@ function BaseLayout({ children }) {
       <div style={styles.content}>{children}</div>
       
       <Footer style={{ textAlign: "left", background: "#F2F2F2", width: "100vw", display: "flex",
-                      justifyContent: "space-between"}}>
+                      justifyContent: "space-between", position:"absolute", "bottom":0,}}>
         <Text style={{ display: "inline-block", fontSize: 16, fontWeight: "bold" }}>
           <Text style={{ color: "black" }}>
             Brand
