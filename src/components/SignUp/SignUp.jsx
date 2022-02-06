@@ -82,11 +82,15 @@ export default function SignUp() {
           <br/>
           <Input type="password" style={{borderRadius: "10px", padding: "10px", background: "#5E6167", color: "white"}} size="large"/>
         </div>
+
+        <Link href="/dashboard">
         <Button
           type="primary"
           size="large" style={styles.btn}>
           Next
         </Button>
+        </Link>
+        
         <br/><br/>
         <Text style={{fontSize: "16px", marginTop: "24px"}}>
             Already have an account? 

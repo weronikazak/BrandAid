@@ -34,11 +34,11 @@ function MenuItems() {
           <a>About</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="/contact">
+      {/* <Menu.Item key="/contact">
         <Link href="/contact">
           <a>Contact Us</a>
         </Link>
-      </Menu.Item>
+      </Menu.Item> */}
       {/* <Menu.Item key="/login">
         <Link href="/login">
           <a>Login</a>
