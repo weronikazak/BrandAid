@@ -89,43 +89,43 @@ export class Dashboard extends Component {
   }
 }
 
-const BarChart = () => {
-  return (
-    <Pie
-      data={{
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [
-          {
-            label: '# of votes',
-            data: [12, 19, 3, 5, 2, 3],
-          },
-        ],
-        backgroundColor: [
-    'orange',
-    'blue',
-    'red',
-    'purple',
-    'green'
-    ],
-    hoverBackgroundColor: [
-    'orange',
-    'blue',
-    'red',
-    'purple',
-    'green'
-    ],
-    borderColor: [ 'orange',
-    'blue',
-    'red',
-    'purple',
-    'green'
-    ]
-      }}
-      height={200}
-      width={200}
-    />
-  )
-}
+// const BarChart = () => {
+//   return (
+//     <Pie
+//       data={{
+//         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+//         datasets: [
+//           {
+//             label: '# of votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//           },
+//         ],
+//         backgroundColor: [
+//     'orange',
+//     'blue',
+//     'red',
+//     'purple',
+//     'green'
+//     ],
+//     hoverBackgroundColor: [
+//     'orange',
+//     'blue',
+//     'red',
+//     'purple',
+//     'green'
+//     ],
+//     borderColor: [ 'orange',
+//     'blue',
+//     'red',
+//     'purple',
+//     'green'
+//     ]
+//       }}
+//       height={200}
+//       width={200}
+//     />
+//   )
+// }
 
 function SidebarItem() {
     return (
