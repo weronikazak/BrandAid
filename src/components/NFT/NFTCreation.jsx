@@ -149,11 +149,11 @@ export class NFTCreation extends Component {
         <div style={styles.select}>
             <Text>Description</Text>
           <br/>
-          <textarea style={{borderRadius: "10px", width:"100%", height:"100px", padding: "10px",background: "#F2F2F2"}}>
+          {/* <textarea style={{borderRadius: "10px", width:"100%", height:"100px", padding: "10px",background: "#F2F2F2"}}>
           Nike sells footwear, clothing and sports accessories in thousands of 
 stores across the world. Collect more of this NFT and claim exciting
 real world rewards!
-           </textarea>
+           </textarea> */}
         </div>
         
         
@@ -171,10 +171,18 @@ real world rewards!
         <Link href="/dashboard">
         <Button
           type="primary"
+          onClick={deployContract}
+        //   onClick={mintNFT("ipfs://QmQ7KS4AzJZaymK6bMu66NztF6xgE49pNJYrrGhKwHVaAJ")}
           size="large" style={styles.btnNext}>
-          Next
+          Deploy Contract
         </Button>
+
         </Link>
+
+        <div style={{background: "lightGreen", padding: 24, marginTop: 24}}> 
+        Contract succesfully uploaded to:
+        </div>
+
       </div>
     </div>
     <br/>
@@ -188,5 +196,46 @@ real world rewards!
     );
   }
 }
+
+// async function mintNFT(tokenURI) {
+//   const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
+
+//   //the transaction
+//   const tx = {
+//     'from': PUBLIC_KEY,
+//     'to': contractAddress,
+//     'nonce': nonce,
+//     'gas': 500000,
+//     'maxPriorityFeePerGas': 1999999987,
+//     'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
+//   };
+
+//   const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY);
+//   signPromise.then((signedTx) => {
+
+//     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(err, hash) {
+//       if (!err) {
+//         console.log("The hash of your transaction is: ", hash, "\nCheck Alchemy's Mempool to view the status of your transaction!");
+//       } else {
+//         console.log("Something went wrong when submitting your transaction:", err)
+//       }
+//     });
+//   }).catch((err) => {
+//     console.log("Promise failed:", err);
+//   });
+// }
+
+async function deployContract() {
+    // const ExampleNFT = await ethers.getContractFactory("CouponNFT")
+    // const exampleNFT = await ExampleNFT.deploy("0xb09Ec64d3552e0461b41dDbF674CeD7dF9373F6C")
+    // await exampleNFT.deployed()
+    // // This solves the bug in Mumbai network where the contract address is not the real one
+    // const txHash = exampleNFT.deployTransaction.hash
+    // const txReceipt = await ethers.provider.waitForTransaction(txHash)
+    // const contractAddress = txReceipt.contractAddress
+    // console.log("Contract deployed to address:", contractAddress)
+   }
+   
+
 
 export default NFTCreation;

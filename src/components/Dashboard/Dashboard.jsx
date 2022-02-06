@@ -143,6 +143,7 @@ function SidebarItem() {
             <span style={{fontSize: "16px"}}>Dashboard</span>
           </ListItemText>
         </ListItem>
+        <Link href="/adCampaign">
         <ListItem button dense >
           <ListItemText style={{padding: "0 30px"}}>
           <span style={{marginRight: "10px", color: "#8209AD", fontSize: "20px"}}>
@@ -151,6 +152,8 @@ function SidebarItem() {
             <span style={{fontSize: "16px"}}>Create Ad Campaign</span>
           </ListItemText>
         </ListItem>
+        </Link>
+        <Link href="/createNFT">
         <ListItem button dense >
           <ListItemText style={{padding: "0 30px"}}>
           <span style={{marginRight: "10px", color: "#8209AD", fontSize: "20px"}}>
@@ -159,6 +162,7 @@ function SidebarItem() {
             <span style={{fontSize: "16px"}}>Create NFT Rewards</span>
           </ListItemText>
         </ListItem>
+        </Link>
         <ListItem button dense >
           <ListItemText style={{padding: "0 30px"}}>
           <span style={{marginRight: "10px", color: "#8209AD", fontSize: "20px"}}>
