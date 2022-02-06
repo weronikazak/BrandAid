@@ -8,57 +8,47 @@ function MenuItems() {
 
   return (
     <Menu
-      theme="light"
       mode="horizontal"
       style={{
         display: "flex",
+        background: "#F2F2F2",
         fontSize: "17px",
         fontWeight: "500",
         width: "100%",
-        justifyContent: "center",
+        justifyContent: "right",
       }}
       defaultSelectedKeys={[pathname]}
     >
-      <Menu.Item key="/quickstart">
-        <Link href="/quickstart">
-          <a>🚀 Quick Start</a>
+      <Menu.Item key="/home">
+        <Link href="/home">
+          <a>Home</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="/wallet">
-        <Link href="/wallet">
-          <a>👛 Wallet</a>
+      <Menu.Item key="/exploreAds">
+        <Link href="/exploreAds">
+          <a>Explore Ads</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="/1inch">
-        <Link href="/1inch">
-          <a>🏦 Dex</a>
+      <Menu.Item key="/about">
+        <Link href="/about">
+          <a>About</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="onramp">
-        <Link href="/onramp">
-          <a>💵 Fiat</a>
+      <Menu.Item key="/contact">
+        <Link href="/contact">
+          <a>Contact Us</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="/erc20balance">
-        <Link href="/erc20balance">
-          <a>💰 Balances</a>
+      {/* <Menu.Item key="/login">
+        <Link href="/login">
+          <a>Login</a>
         </Link>
       </Menu.Item>
-      <Menu.Item key="/erc20transfers">
-        <Link href="/erc20transfers">
-          <a>💸 Transfers</a>
+      <Menu.Item key="/signup">
+        <Link href="/signup">
+          <a>Sign Up</a>
         </Link>
-      </Menu.Item>
-      <Menu.Item key="/nftBalance">
-        <Link href="/nftBalance">
-          <a>🖼 NFTs</a>
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="/contract">
-        <Link href="/contract">
-          <a>📄 Contract</a>
-        </Link>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
 }

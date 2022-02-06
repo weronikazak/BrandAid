@@ -1,11 +1,13 @@
 import { useMoralis } from "react-moralis";
 import { getEllipsisTxt } from "helpers/formatters";
-import Blockie from "./Blockie";
 import { Button, Card, Modal } from "antd";
 import { useState } from "react";
 import Address from "./Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
+import Text from "antd/lib/typography/Text";
+import Link from "next/link";
+
 const styles = {
   account: {
     height: "42px",
@@ -21,6 +23,31 @@ const styles = {
   text: {
     color: "#21BF96",
   },
+  signup: {
+    height: "48px",
+    padding: "0 12px",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "fit-content",
+    borderRadius: "12px",
+    backgroundColor: "#7A09D2",
+    marginLeft: "10px",
+    cursor: "pointer"
+  },
+  login: {
+    height: "48px",
+    padding: "0 12px",
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "fit-content",
+    borderRadius: "12px",
+    backgroundColor: "#9E4FDC",
+    cursor: "pointer"
+  }
 };
 
 function Account() {
@@ -30,11 +57,26 @@ function Account() {
 
   if (!isAuthenticated) {
     return (
-      <div
-        style={styles.account}
-        onClick={() => authenticate({ signingMessage: "Hello World!" })}
-      >
-        <p style={styles.text}>Authenticate</p>
+      // <div
+      //   style={styles.account}
+      //   onClick={() => authenticate({ signingMessage: "Hello World!" })}
+      // >
+      //   <p style={styles.text}>Authenticate</p>
+      // </div>
+      <div style={{ display: "inline-block", display: "flex" }}>
+        <Link  href="/login">
+        <Button style={styles.login} >
+          Login
+        </Button>
+        </Link>
+      <Link href="/signup">
+        <Button
+          style={styles.signup}
+          // onClick={() => authenticate({ signingMessage: "Hello World!" })}
+          >
+          Sign Up
+        </Button>
+      </Link>
       </div>
     );
   }

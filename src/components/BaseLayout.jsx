@@ -18,7 +18,8 @@ const styles = {
   content: {
     display: "flex",
     justifyContent: "center",
-    fontFamily: "Roboto, sans-serif",
+    // fontFamily: "Roboto, sans-serif",
+    fontFamily: "'Inter', sans-serif",
     color: "#041836",
     marginTop: "130px",
     padding: "10px",
@@ -27,11 +28,12 @@ const styles = {
     position: "fixed",
     zIndex: 1,
     width: "100%",
-    background: "#fff",
+    background: "#F2F2F2",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "'Inter', sans-serif",
+    // fontFamily: "Roboto, sans-serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
     padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
@@ -42,62 +44,39 @@ const styles = {
     alignItems: "center",
     fontSize: "15px",
     fontWeight: "600",
-  },
+  }
 };
 
 function BaseLayout({ children }) {
   return (
-    <Layout style={{ height: "100vh", overflow: "auto" }}>
+    <Layout style={{ display:"absolute", "bottom":0, height: "100vh", overflow: "auto", background: "#DBDBDB" }}>
       <Header style={styles.header}>
         <Logo />
         <MenuItems />
         <div style={styles.headerRight}>
-          <Chains />
-          <TokenPrice
-            address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
-            chain="eth"
-            image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
-            size="40px"
-          />
-          <NativeBalance />
+          {/* <Chains /> */}
+          
+          {/* <NativeBalance /> */}
           <Account />
         </div>
       </Header>
       <div style={styles.content}>{children}</div>
-      <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>
-          ⭐️ Please star this{" "}
-          <a
-            href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            boilerplate
-          </a>
-          , every star makes us very happy!
+      
+      <Footer style={{ textAlign: "left", background: "#F2F2F2", width: "100vw", display: "flex",
+                      justifyContent: "space-between"}}>
+        <Text style={{ display: "inline-block", fontSize: 16, fontWeight: "bold" }}>
+          <Text style={{ color: "black" }}>
+            Brand
+          </Text>
+          <Text style={{ color: "#8209AD" }}>
+            Aid
+          </Text>
         </Text>
 
-        <Text style={{ display: "block" }}>
-          🙋 You have questions? Ask them on the {""}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
-          >
-            Moralis forum
-          </a>
+        <Text style={{ display: "inline-block", fontWeight: "bold", float: "right" }}>
+          Copyright 2022 © BrandAid. All rights reserved.
         </Text>
 
-        <Text style={{ display: "block" }}>
-          📖 Read more about{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplate"
-          >
-            Moralis
-          </a>
-        </Text>
       </Footer>
     </Layout>
   );

@@ -24,7 +24,7 @@ function TokenPrice(props) {
 
   return (
     <div style={styles.token}>
-      <img
+      {/* <img
         src={props.image || noLogoToken}
         alt="logo"
         height={props?.size || "35px"}
@@ -39,7 +39,7 @@ function TokenPrice(props) {
           (isUSDMode
             ? formattedData.formattedUsd
             : formattedData.formattedNative)}
-      </span>
+      </span> */}
     </div>
   );
 }
