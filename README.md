@@ -2,7 +2,7 @@
 
 > React components and hooks for fast building dApps without running own backend
 
-🚀DEMO: https://ethereum-boilerplate.github.io/ethereum-boilerplate
+🚀DEMO: https://davidparseen.github.io/ethereum-nextjs-boilerplate
 
 This boilerplate is built on [react-moralis](https://github.com/MoralisWeb3/react-moralis) and [Moralis](https://moralis.io?utm_source=github&utm_medium=readme&utm_campaign=ethereum-boilerplate). Also has its own context provider for quick access to `chainId` or `ethAddress`
 
@@ -35,12 +35,16 @@ cd ethereum-boilerplate
 yarn install
 ```
 
+<<<<<<< HEAD
 ✏ Rename `.env.example` to `.env` in the main folder and provide your `appId` and `serverUrl` from Moralis ([How to start Moralis Server](https://docs.moralis.io/moralis-server/getting-started/create-a-moralis-server))
+=======
+✏ Rename `.env.local.example` to `.env` in the main folder and provide your `appId` and `serverUrl` from Moralis ([How to start Moralis Server](https://docs.moralis.io/moralis-server/getting-started/create-a-moralis-server))
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 Example:
 
 ```jsx
-REACT_APP_MORALIS_APPLICATION_ID = xxxxxxxxxxxx
-REACT_APP_MORALIS_SERVER_URL = https://xxxxxx.grandmoralis.com:2053/server
+NEXT_PUBLIC_MORALIS_APPLICATION_ID = xxxxxxxxxxxx
+NEXT_PUBLIC_MORALIS_SERVER_URL = https://xxxxxx.grandmoralis.com:2053/server
 ```
 
 🚴‍♂️ Run your App:
@@ -215,6 +219,7 @@ const [address, setAddress] = useState();
 <DEX chain="eth" />
 ```
 
+<<<<<<< HEAD
 ```jsx
 // Adding custom tokens
 
@@ -232,6 +237,8 @@ const customTokens = {
 <DEX chain="eth" customTokens={customTokens} />;
 ```
 
+=======
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 ### `<Wallet />`
 
 ![wallet](https://user-images.githubusercontent.com/78314301/141115062-7152ed11-6167-45fe-a4d9-50e78f051838.gif)
@@ -715,7 +722,13 @@ const TokenPrice = () => {
       {error && <>{JSON.stringify(error)}</>}
       <button
         onClick={() =>
+<<<<<<< HEAD
           fetchTokenPrice({ params: { address: "0x6...361", chain: "bsc" } })
+=======
+          fetchTokenPrice({
+            params: { address: "0x6...361", chain: "bsc" },
+          })
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
         }
       >
         Refetch
@@ -822,5 +835,8 @@ const SupportedTokens = () => {
   );
 };
 ```
+<<<<<<< HEAD
 
 ### Where to host your dApp?
+=======
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374

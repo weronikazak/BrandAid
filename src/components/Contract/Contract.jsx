@@ -61,7 +61,11 @@ export default function Contract() {
               alignItems: "center",
             }}
           >
+<<<<<<< HEAD
             Your contract: {contract?.contractName}
+=======
+            Your contract: {contractName}
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
             <Address
               avatar="left"
               copyable
@@ -100,6 +104,7 @@ export default function Contract() {
                 params,
               };
 
+<<<<<<< HEAD
               if (!isView) {
                 const tx = await Moralis.executeFunction({
                   awaitReceipt: false,
@@ -109,6 +114,28 @@ export default function Contract() {
                   setResponses({
                     ...responses,
                     [name]: { result: null, isLoading: true },
+=======
+            if (!isView) {
+              const tx = await Moralis.executeFunction({
+                awaitReceipt: false,
+                ...options,
+              });
+              tx.on("transactionHash", (hash) => {
+                setResponses({
+                  ...responses,
+                  [name]: { result: null, isLoading: true },
+                });
+                openNotification({
+                  message: "🔊 New Transaction",
+                  description: `${hash}`,
+                });
+                console.log("🔊 New Transaction", hash);
+              })
+                .on("receipt", (receipt) => {
+                  setResponses({
+                    ...responses,
+                    [name]: { result: null, isLoading: false },
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
                   });
                   openNotification({
                     message: "🔊 New Transaction",
@@ -116,6 +143,7 @@ export default function Contract() {
                   });
                   console.log("🔊 New Transaction", hash);
                 })
+<<<<<<< HEAD
                   .on("receipt", (receipt) => {
                     setResponses({
                       ...responses,
@@ -150,6 +178,27 @@ export default function Contract() {
         {isDeployedToActiveChain === false && (
           <>{`The contract is not deployed to the active ${chainId} chain. Switch your active chain or try agan later.`}</>
         )}
+=======
+                .on("error", (error) => {
+                  console.log(error);
+                });
+            } else {
+              console.log("options", options);
+              Moralis.executeFunction(options).then((response) =>
+                setResponses({
+                  ...responses,
+                  [name]: { result: response, isLoading: false },
+                })
+              );
+            }
+          }}
+        >
+          <ContractMethods
+            displayedContractFunctions={displayedContractFunctions}
+            responses={responses}
+          />
+        </Form.Provider>
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
       </Card>
       <Card
         title={"Contract Events"}
@@ -163,10 +212,17 @@ export default function Contract() {
       >
         {data.map((event, key) => (
           <Card
+<<<<<<< HEAD
             title={"Transfer event"}
             size="small"
             style={{ marginBottom: "20px" }}
             key={key}
+=======
+            key={key}
+            title={"Transfer event"}
+            size="small"
+            style={{ marginBottom: "20px" }}
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
           >
             {getEllipsisTxt(event.attributes.transaction_hash, 14)}
           </Card>

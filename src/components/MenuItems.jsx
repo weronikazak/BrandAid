@@ -1,47 +1,54 @@
-import { useLocation } from "react-router";
+import React from "react";
+import { useRouter } from "next/router";
 import { Menu } from "antd";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
 function MenuItems() {
-  const { pathname } = useLocation();
+  const { pathname } = useRouter();
 
   return (
     <Menu
-      theme="light"
       mode="horizontal"
       style={{
         display: "flex",
+        background: "#F2F2F2",
         fontSize: "17px",
         fontWeight: "500",
         width: "100%",
-        justifyContent: "center",
+        justifyContent: "right",
       }}
       defaultSelectedKeys={[pathname]}
     >
-      <Menu.Item key="/quickstart">
-        <NavLink to="/quickstart">🚀 Quick Start</NavLink>
+      <Menu.Item key="/home">
+        <Link href="/home">
+          <a>Home</a>
+        </Link>
       </Menu.Item>
-      <Menu.Item key="/wallet">
-        <NavLink to="/wallet">👛 Wallet</NavLink>
+      <Menu.Item key="/exploreAds">
+        <Link href="/exploreAds">
+          <a>Explore Ads</a>
+        </Link>
       </Menu.Item>
-      <Menu.Item key="/1inch">
-        <NavLink to="/1inch">🏦 Dex</NavLink>
+      <Menu.Item key="/about">
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </Menu.Item>
-      <Menu.Item key="onramp">
-        <NavLink to="/onramp">💵 Fiat</NavLink>
+      {/* <Menu.Item key="/contact">
+        <Link href="/contact">
+          <a>Contact Us</a>
+        </Link>
+      </Menu.Item> */}
+      {/* <Menu.Item key="/login">
+        <Link href="/login">
+          <a>Login</a>
+        </Link>
       </Menu.Item>
-      <Menu.Item key="/erc20balance">
-        <NavLink to="/erc20balance">💰 Balances</NavLink>
-      </Menu.Item>
-      <Menu.Item key="/erc20transfers">
-        <NavLink to="/erc20transfers">💸 Transfers</NavLink>
-      </Menu.Item>
-      <Menu.Item key="/nftBalance">
-        <NavLink to="/nftBalance">🖼 NFTs</NavLink>
-      </Menu.Item>
-      <Menu.Item key="/contract">
-        <NavLink to="/contract">📄 Contract</NavLink>
-      </Menu.Item>
+      <Menu.Item key="/signup">
+        <Link href="/signup">
+          <a>Sign Up</a>
+        </Link>
+      </Menu.Item> */}
     </Menu>
   );
 }

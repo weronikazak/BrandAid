@@ -10,7 +10,8 @@ const styles = {
     alignItems: "center",
     height: "42px",
     fontWeight: "500",
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "'Inter', sans-serif",
+    fontFamily: "/Roboto, sans-serif",
     fontSize: "14px",
     padding: "0 10px",
   },
@@ -42,26 +43,6 @@ const menuItems = [
     icon: <ETHLogo />,
   },
   {
-    key: "0x2a",
-    value: "Kovan Testnet",
-    icon: <ETHLogo />,
-  },
-  {
-    key: "0x5",
-    value: "Goerli Testnet",
-    icon: <ETHLogo />,
-  },
-  {
-    key: "0x38",
-    value: "Binance",
-    icon: <BSCLogo />,
-  },
-  {
-    key: "0x61",
-    value: "Smart Chain Testnet",
-    icon: <BSCLogo />,
-  },
-  {
     key: "0x89",
     value: "Polygon",
     icon: <PolygonLogo />,
@@ -71,6 +52,7 @@ const menuItems = [
     value: "Mumbai",
     icon: <PolygonLogo />,
   },
+<<<<<<< HEAD
   {
     key: "0xa86a",
     value: "Avalanche",
@@ -81,6 +63,8 @@ const menuItems = [
     value: "Avalanche Testnet",
     icon: <AvaxLogo />,
   },
+=======
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 ];
 
 function Chains() {
@@ -89,6 +73,16 @@ function Chains() {
   const [selected, setSelected] = useState({});
 
   console.log("chain", chain);
+<<<<<<< HEAD
+=======
+  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
+    useMoralis();
+
+  useEffect(() => {
+    if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading) enableWeb3();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, isWeb3Enabled]);
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 
   useEffect(() => {
     if (!chainId) return null;
@@ -98,8 +92,13 @@ function Chains() {
   }, [chainId]);
 
   const handleMenuClick = (e) => {
-    console.log("switch to: ", e.key);
-    switchNetwork(e.key);
+    try {
+      console.log("switch to: ", e.key);
+      switchNetwork(e.key);
+    } catch (_error) {
+      console.log(_error);
+      handleMenuClick(e);
+    }
   };
 
   const menu = (
@@ -116,7 +115,11 @@ function Chains() {
 
   return (
     <div>
+<<<<<<< HEAD
       <Dropdown overlay={menu} trigger={["click"]}>
+=======
+      {/* <Dropdown overlay={menu} trigger={["click"]}>
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
         <Button
           key={selected?.key}
           icon={selected?.icon}
@@ -125,7 +128,7 @@ function Chains() {
           <span style={{ marginLeft: "5px" }}>{selected?.value}</span>
           <DownOutlined />
         </Button>
-      </Dropdown>
+      </Dropdown> */}
     </div>
   );
 }

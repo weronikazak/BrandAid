@@ -31,7 +31,11 @@ function NativeTransactions() {
       key: "value",
       render: (value) =>
         // missing second argument in FromWei, decimals
+<<<<<<< HEAD
         parseFloat(Moralis.Units.FromWei(value)).toFixed(6),
+=======
+        parseFloat(Moralis.Units.FromWei(value).toFixed(6)),
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     },
     {
       title: "Hash",

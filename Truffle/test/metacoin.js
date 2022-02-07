@@ -19,7 +19,11 @@ contract("MetaCoin", (accounts) => {
     assert.equal(
       metaCoinEthBalance,
       2 * metaCoinBalance,
+<<<<<<< HEAD
       "Library function returned unexpected function, linkage may be broken",
+=======
+      "Library function returned unexpected function, linkage may be broken"
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     );
   });
   it("should send coin correctly", async () => {
@@ -52,12 +56,20 @@ contract("MetaCoin", (accounts) => {
     assert.equal(
       accountOneEndingBalance,
       accountOneStartingBalance - amount,
+<<<<<<< HEAD
       "Amount wasn't correctly taken from the sender",
+=======
+      "Amount wasn't correctly taken from the sender"
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     );
     assert.equal(
       accountTwoEndingBalance,
       accountTwoStartingBalance + amount,
+<<<<<<< HEAD
       "Amount wasn't correctly sent to the receiver",
+=======
+      "Amount wasn't correctly sent to the receiver"
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     );
   });
 });

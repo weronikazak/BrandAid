@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const AvaxLogo = () => (
   <svg
     width="25"
@@ -36,6 +37,8 @@ export const BSCLogo = () => (
   </svg>
 );
 
+=======
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 export const ETHLogo = () => (
   <svg
     width="25"

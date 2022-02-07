@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 node_modules/
 build/
 yarn.lock
 package-lock.json
 Truffle/
+=======
+# Ignore artifacts:
+build
+coverage
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374

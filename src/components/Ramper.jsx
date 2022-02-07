@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useMoralis } from "react-moralis";
 
@@ -14,7 +15,11 @@ function Ramper() {
     initPlugin();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Moralis.Plugins]);
+=======
+import React from "react";
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 
+function Ramper({ ramper }) {
   return (
     <iframe
       src={ramper}

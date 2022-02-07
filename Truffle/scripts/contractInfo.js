@@ -6,5 +6,9 @@ fs.copyFile(
   (err) => {
     if (err) throw err;
     console.log("✅ Your contract's ABI was copied to the frontend");
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 );

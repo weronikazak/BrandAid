@@ -37,6 +37,20 @@ export default function AssetSelector({ setAsset, style }) {
               value={item["token_address"]}
               key={item["token_address"]}
             >
+<<<<<<< HEAD
+=======
+              <img
+                src={
+                  item.logo ||
+                  "https://etherscan.io/images/main/empty-token.png"
+                }
+                alt="nologo"
+                width="24px"
+                height="24px"
+                preview={false}
+                style={{ borderRadius: "15px" }}
+              />
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
               <div
                 style={{
                   display: "flex",

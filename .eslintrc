@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "settings": {
     "react": {
       "version": "detect"
@@ -32,3 +33,11 @@
     "react/no-unescaped-entities": "off"
   }
 }
+=======
+  "extends": "next",
+  "root": true,
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
+}
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374

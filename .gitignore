@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+yarn.lock
 
 # testing
 /coverage
@@ -30,5 +31,14 @@ coverage.json
 typechain
 
 #Truffle files
+<<<<<<< HEAD
 /Truffle/build
 /Truffle/data
+=======
+/truffle/build
+/truffle/data
+
+#Next.js
+.next
+out/
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374

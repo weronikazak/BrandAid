@@ -10,7 +10,11 @@ const useInchDex = (chain) => {
     Moralis.Plugins.oneInch
       .getSupportedTokens({ chain })
       .then((tokens) => setTokenlist(tokens.tokens));
+<<<<<<< HEAD
   }, [Moralis, Moralis.Plugins, chain]);
+=======
+  }, [Moralis.Plugins, chain]);
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
 
   const getQuote = async (params) =>
     await Moralis.Plugins.oneInch.quote({
@@ -19,7 +23,11 @@ const useInchDex = (chain) => {
       toTokenAddress: params.toToken.address, // The token you want to receive
       amount: Moralis.Units.Token(
         params.fromAmount,
+<<<<<<< HEAD
         params.fromToken.decimals,
+=======
+        params.fromToken.decimals
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
       ).toString(),
     });
 
@@ -27,7 +35,11 @@ const useInchDex = (chain) => {
     const { fromToken, fromAmount, chain } = params;
     const amount = Moralis.Units.Token(
       fromAmount,
+<<<<<<< HEAD
       fromToken.decimals,
+=======
+      fromToken.decimals
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     ).toString();
     if (fromToken.address !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee") {
       await Moralis.Plugins.oneInch
@@ -67,7 +79,11 @@ const useInchDex = (chain) => {
       toTokenAddress: params.toToken.address, // The token you want to receive
       amount: Moralis.Units.Token(
         params.fromAmount,
+<<<<<<< HEAD
         params.fromToken.decimals,
+=======
+        params.fromToken.decimals
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
       ).toString(),
       fromAddress: account, // Your wallet address
       slippage: 1,

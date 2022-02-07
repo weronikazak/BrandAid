@@ -34,7 +34,11 @@ function ERC20Transfers() {
       dataIndex: "value",
       key: "value",
       render: (value, item) =>
+<<<<<<< HEAD
         parseFloat(Moralis.Units.FromWei(value, item.decimals)).toFixed(6),
+=======
+        parseFloat(Moralis.Units.FromWei(value, item.decimals).toFixed(6)),
+>>>>>>> 6dad8e2ccb53543882e8f543c7f932272f7ca374
     },
     {
       title: "Hash",
